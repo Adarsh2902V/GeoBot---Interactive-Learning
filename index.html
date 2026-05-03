@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GeoBot - Interactive Learning</title>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- NEW: Thematic Geography Watermarks in the background -->
+    <div class="bg-icons">
+        <div class="bg-icon icon-1">🌍</div>
+        <div class="bg-icon icon-2">🧭</div>
+        <div class="bg-icon icon-3">📍</div>
+        <div class="bg-icon icon-4">🗺️</div>
+        <div class="bg-icon icon-5">✈️</div>
+        <div class="bg-icon icon-6">🏔️</div>
+        <div class="bg-icon icon-7">🌋</div>
+        <div class="bg-icon icon-8">📍</div>
+    </div>
+
+    <!-- Welcome Screen -->
+    <div id="welcome-screen" class="modal-panel">
+        <div class="icon-container">🌍</div>
+        <h1>GeoBot Quiz</h1>
+        <p>Confirm your settings to start your journey.</p>
+        
+        <input type="text" id="player-name" value="Adarsh" placeholder="Your Name">
+        
+        <select id="difficulty-level" class="styled-select">
+            <option value="Easy">Easy (Capitals & Continents)</option>
+            <option value="Medium" selected>Medium (Rivers & Landmarks)</option>
+            <option value="Hard">Hard (Deep Geography & Coordinates)</option>
+        </select>
+
+        <button onclick="initGame()" class="primary-btn">Start Quiz</button>
+    </div>
+
+    <!-- Game Over Modal -->
+    <div id="game-over-overlay" class="overlay" style="display: none;">
+        <div class="modal-panel game-over-box">
+            <div class="icon-container">🏆</div>
+            <h1>Quiz Complete!</h1>
+            <p id="final-score-text">You scored X out of Y.</p>
+            <button onclick="location.reload()" class="primary-btn">Play Again</button>
+        </div>
+    </div>
+
+    <!-- Main App Interface -->
+    <div class="app-container" id="app-container" style="display: none;">
+        
+        <!-- Left Side: Chat -->
+        <div class="chat-section">
+            <div class="chat-header">
+                <div class="header-title">
+                    <span class="avatar bot-avatar-small">🤖</span> GeoBot
+                </div>
+                <div class="scoreboard">
+                    Q: <span id="q-count">1</span>/5 &nbsp;|&nbsp; Score: <span id="score">0</span>
+                </div>
+            </div>
+            
+            <div class="chat-history" id="chat-history">
+                <!-- Messages spawn here -->
+            </div>
+
+            <div class="input-area" id="options-container">
+                <!-- Multiple Choice Buttons -->
+            </div>
+        </div>
+
+        <!-- Right Side: Map -->
+        <div class="map-section">
+            <div id="map"></div>
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
