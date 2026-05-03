@@ -1,5 +1,5 @@
 // --- 1. Configuration ---
-const API_KEY = "AIzaSyCLfSCJDq_mcUUkN-SpdqcNGa1Vey2mkxE";
+const API_KEY = "AIzaSyD0YCA4QSALKVppWsIQBMbEqT8X6qzDdU0";
 const GEMINI_URL = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=${API_KEY}`;
 
 let map, currentMarker = null;
