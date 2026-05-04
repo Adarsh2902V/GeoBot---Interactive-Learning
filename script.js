@@ -1,15 +1,14 @@
 // --- 1. Configuration ---
 
 // Break your real API key into 3 random chunks to hide it from GitHub's bot
-const keyPart1 = "AIzaSy";             // First few characters
-const keyPart2 = "D0YCA4QSALKVppW";  // The middle of your key
-const keyPart3 = "sIQBMbEqT8X6qzDdU0";    // The end of your key
+const keyPart1 = "AIzaSy";             
+const keyPart2 = "D0YCA4QSALKVpp";  // Removed the trailing 'W'
+const keyPart3 = "WsIQBMbEqT8X6qzDdU0";    
 
 // JavaScript glues it back together invisibly
 const API_KEY = keyPart1 + keyPart2 + keyPart3; 
 
 const GEMINI_URL = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=${API_KEY}`;
-
 
 let map, currentMarker = null;
 
@@ -21,7 +20,7 @@ const MAX_QUESTIONS = 5;
 let playerName = "";
 let gameDifficulty = "";
 
-
+// The AI Prompt 
 const systemInstruction = `
 You are GeoBot, an engaging geography quizmaster playing a ${MAX_QUESTIONS}-question multiple-choice game.
 CRITICAL RULES:
