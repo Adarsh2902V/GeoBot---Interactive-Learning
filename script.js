@@ -10,9 +10,6 @@ const API_KEY = keyPart1 + keyPart2 + keyPart3;
 
 const GEMINI_URL = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=${API_KEY}`;
 
-let map, currentMarker = null;
-
-// ... (The rest of your code stays exactly the same)
 
 let map, currentMarker = null;
 
@@ -24,7 +21,7 @@ const MAX_QUESTIONS = 5;
 let playerName = "";
 let gameDifficulty = "";
 
-// The AI Prompt 
+
 const systemInstruction = `
 You are GeoBot, an engaging geography quizmaster playing a ${MAX_QUESTIONS}-question multiple-choice game.
 CRITICAL RULES:
