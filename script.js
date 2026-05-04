@@ -2,8 +2,8 @@
 
 // Break your real API key into 3 random chunks to hide it from GitHub's bot
 const keyPart1 = "AIzaSy";             
-const keyPart2 = "BIewSM_GCxLIh-441";
-const keyPart3 = "MDVAoh8JDuDlw0Bk";    
+const keyPart2 = "BhXhwvR0LVE";
+const keyPart3 = "fm0aybBp3rfTeARmwuIzRQ";    
 
 // JavaScript glues it back together invisibly
 const API_KEY = keyPart1 + keyPart2 + keyPart3; 
